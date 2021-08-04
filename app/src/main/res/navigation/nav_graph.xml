@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.smoothie.logIn.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_expFragment"
+            app:destination="@id/expFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerLoginFragment"
+        android:name="com.example.smoothie.logIn.RegisterLoginFragment"
+        android:label="fragment_register_login"
+        tools:layout="@layout/fragment_register_login" >
+        <action
+            android:id="@+id/action_registerLoginFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerLoginFragment_to_authentificationFragment"
+            app:destination="@id/authentificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expFragment"
+        android:name="com.example.smoothie.logIn.ExpFragment"
+        android:label="fragment_exp"
+        tools:layout="@layout/fragment_exp" >
+        <action
+            android:id="@+id/action_expFragment_to_registerLoginFragment"
+            app:destination="@id/registerLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appliancesFragment"
+        android:name="com.example.smoothie.highPriority.AppliancesFragment"
+        android:label="Appliances"
+        tools:layout="@layout/fragment_appliances" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.smoothie.highPriority.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.smoothie.highPriority.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.smoothie.highPriority.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/authentificationFragment"
+        android:name="com.example.smoothie.logIn.AuthentificationFragment"
+        android:label="fragment_authentification"
+        tools:layout="@layout/fragment_authentification" >
+        <action
+            android:id="@+id/action_authentificationFragment_to_accountSetupFragment"
+            app:destination="@id/accountSetupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.smoothie.logIn.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountSetupFragment"
+        android:name="com.example.smoothie.logIn.AccountSetupFragment"
+        android:label="fragment_account_setup"
+        tools:layout="@layout/fragment_account_setup" >
+        <action
+            android:id="@+id/action_accountSetupFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
