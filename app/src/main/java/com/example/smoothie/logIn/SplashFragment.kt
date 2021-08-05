@@ -12,7 +12,7 @@ import com.example.smoothie.R
 
 
 class SplashFragment : Fragment() {
-    private val timeOut = 1500
+    private val timeOut = 3000
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
