@@ -23,7 +23,8 @@
         android:layout_width="300dp"
         android:layout_height="54dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintBottom_toTopOf="@+id/password_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -31,16 +32,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/email"
-            tools:layout_editor_absoluteX="34dp"
-            tools:layout_editor_absoluteY="138dp" />
+            android:background="@drawable/button_bkg"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/password_layout"
         android:layout_width="300dp"
         android:layout_height="54dp"
         android:layout_marginBottom="50dp"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -50,6 +52,7 @@
             android:layout_height="match_parent"
             android:hint="@string/password"
             android:inputType="textPassword"
+            android:background="@drawable/button_bkg"
             tools:layout_editor_absoluteX="34dp"
             tools:layout_editor_absoluteY="138dp" />
 
